@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 import sys
 
@@ -13,13 +14,16 @@ Ids = {'Adams Andrew':1,'Callahan Laura':2,'Edwards Nancy':3,'Johnson Steve':4,
 with open(filename, "r") as file:
     reader = csv.DictReader(file)
 
-    print("ID","LastName,Firstname")
-
-    id_num = 1
-    for row in reader:
+    print("ID","ManagerName","LastName","Firstname")
+    #print("ID","LastName,Firstname")
+    
+     id_num = 1
+     for row in reader:
         FirstName = row["FirstName"]
         LastName = row["LastName"]
         Manager = row["Manager"]
-        #print(f"{id_num}",f"{Manager}", f",{LastName}", f",{FirstName}")
-        print(f"{id_num}",f"{Ids['Adams Andrew']}",f"{LastName}", f"{FirstName}")
+        #print(f"{Manager}")
+        #if Manager == Ids.items:
+        print(f"{id_num}",f"{Manager}", f",{LastName}", f",{FirstName}")
+        #print(f"{id_num}",f"{Ids:[]}",f"{LastName}", f"{FirstName}")
         id_num+=1
